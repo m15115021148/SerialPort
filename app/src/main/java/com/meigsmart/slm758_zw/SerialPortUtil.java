@@ -116,7 +116,7 @@ public class SerialPortUtil {
                     byte[] buffer = new byte[1024];
                     size = mInputStream.read(buffer);
                     if (size > 0) {
-                        Log.d(TAG, "length is:"+size+",data is:"+new String(buffer, 0, size));
+                        Log.d(TAG, "length is:"+size+",data is:"+new String(buffer).trim());
                         if (null != onDataReceiveListener) {
                             onDataReceiveListener.onDataReceive(buffer, size);
                         }
